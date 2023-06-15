@@ -1,10 +1,8 @@
 import './App.css'
-import Home from './pages/Home'
-import ScrollToTop from './components/ScrollToTop'
+import Home from './components/Home'
 import Tools from './components/Tools'
 import Projects from 'components/Projects'
 import Contact from 'components/Contact'
-import Footer from 'components/Footer'
 import Navbar from 'components/Navbar'
 
 function App() {
@@ -16,7 +14,6 @@ function App() {
         <Tools />
         <Contact />
       </div>
-
   );
 }
 
