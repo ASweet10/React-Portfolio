@@ -11,8 +11,6 @@
 :root{
   --primary-color: purple;
   --secondary-color: blue;
-  /* font family */
-
 }
 *{
   margin: 0;
