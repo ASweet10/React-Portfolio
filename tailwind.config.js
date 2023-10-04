@@ -5,10 +5,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'background-dark': '#181818',
-        'background-light': '#f2f2f2',
-        'text-dark': '#121212',
-        'text-light': '#dbdbdb',
+        'darkBackground': '#181818',
+        'background': '#f2f2f2',
+        'darkText': '#121212',
+        'text': '#dbdbdb',
         'button-hover': '#161616',
         'project-tools-bg': '#131c80',
       }
