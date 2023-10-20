@@ -2,41 +2,37 @@ import React from 'react'
 import stockDashboard from '../images/stock-dashboard-2.png'
 import ecommerce from '../images/ecommerce.png'
 import sortVisualizer from '../images/sort-visualizer-1.png'
-import horror2 from '../images/horrorgame-2.png'
-import { BsLink45Deg } from 'react-icons/bs'
+import gymWebsite from '../images/bg_image_forest.jpg'
 import { FaGithub } from 'react-icons/fa'
+import { BsBox, BsBoxArrowUpRight } from 'react-icons/bs'
 
 export default function Projects() {
   const projectTags = [
     
   ]
   const projects = [
-    { id: 0, src: ecommerce, title: 'E-Commerce',
+    { id: 0, src: ecommerce, title: 'E-Commerce', tools:[ "HTML", "CSS", "Next.JS", "Sanity", "Stripe" ],
       desc: 'E-Commerce site built using Next.JS and Sanity CMS. User can add/remove/update items' +
       ' in cart and use Stripe to complete payments.',
       demoUrl: '',
       sourceURL: 'https://github.com/ASweet10/ecommerce',
-      tools:[ "HTML", "CSS", "Next.JS", "Sanity", "Stripe" ]
     },
-    { id: 1, src: stockDashboard, title: 'Stock Dashboard',
+    { id: 1, src: gymWebsite, title: 'Gym Website', tools:[],
+      desc: '',
+      demoUrl: '',
+      sourceURL: '',
+    },
+    { id: 2, src: gymWebsite, title: 'Social Media Site', tools:[ "HTML", "CSS", "React", "Tailwind", "MongoDB" ],
+      desc: '',
+      demoUrl: 'https://sorting-visualizer-107.netlify.app',
+      sourceURL: 'https://github.com/ASweet10/SortingVisualizer',
+    },    
+    { id: 3, src: stockDashboard, title: 'Stock Dashboard', tools:[ "Python", "DASH", "Plotly.js" ],
       desc: 'Stock market investment tool which includes price chart, metrics, investor sentiment,' + 
       ' volume visualization, and news articles.',
       demoUrl: '',
       sourceURL: 'https://github.com/ASweet10/StockDashboard',
-      tools:[ "Python", "DASH", "Plotly.js" ] 
     },
-    { id: 2, src: sortVisualizer, title: 'Sorting Visualizer',
-      desc: 'Visualizer for bubble, heap, quick, insertion, and merge sorts.',
-      demoUrl: 'https://sorting-visualizer-107.netlify.app',
-      sourceURL: 'https://github.com/ASweet10/SortingVisualizer',
-      tools:[ "HTML", "CSS", "JavaScript" ]
-    },
-    { id: 3, src: horror2, title: 'Other Projects',
-      desc: 'Game Projects, Sorting Visualizer, React/JS Practice',
-      demoUrl: '',
-      sourceURL: 'https://elitefouragatha.itch.io',
-      tools:[]
-    }
   ]
 
   return (
@@ -65,10 +61,18 @@ export default function Projects() {
                           )
                         })}
                       </div>
-                      <div className='flex p-6 items-center justify-left gap-8'>
-                        <a target="blank" href={demoUrl}><BsLink45Deg size={'48px'}/></a>
-                        <a target="blank" href={sourceURL}><FaGithub size={'48px'} /></a>
+
+                      <div className='flex p-6 items-center justify-left gap-6'>
+                        <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                          <h1 className='pr-2'>Demo</h1>
+                          <BsBoxArrowUpRight size={'20px'} />
+                        </a>
+                        <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                          <h1 className='pr-2'>Code</h1>
+                          <FaGithub size={'20px'} />
+                        </a>
                       </div>
+                      
                     </div>
                   </div>
               </div>

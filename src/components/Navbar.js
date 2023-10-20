@@ -9,16 +9,16 @@ export default function Navbar() {
   const [ colorMode, setColorMode ] = useColorMode()
 
   const navLinks = [
-    { id: 1, link: 'about' },
-    { id: 2, link: 'projects' },
-    { id: 3, link: 'tech' },
+    { id: 1, link: 'home' },
+    { id: 2, link: 'about' },
+    { id: 3, link: 'projects' },
     { id: 4, link: 'contact' }
   ]
 
   return (
     <div className='flex justify-between items-center w-full h-20 px-4 fixed bg-background dark:bg-darkBackground text-darkText dark:text-text'>
       <div>
-        <h1 className='text-2xl font-signature md:ml-8 text-darkText dark:text-text'>AaronSweet.dev</h1>
+        <h1 className='text-lg font-signature md:ml-8 text-darkText dark:text-text'>AaronSweet.dev</h1>
       </div>
 
       <div className='flex flex-row'>
@@ -32,7 +32,7 @@ export default function Navbar() {
         </ul>
         {!navOpen && (
           <div onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')} className='cursor-pointer px-16 z-10 focus:outline-none transition-none'>
-            {colorMode === 'dark' ? <BsSunFill className='text-text-light' size={25} /> : <BsFillMoonFill className='text-text-dark' size={25} />}
+            {colorMode === 'dark' ? <BsFillMoonFill className='text-text-light' size={25} /> : <BsSunFill className='text-text-dark' size={25} />}
           </div>
         )}
       </div>

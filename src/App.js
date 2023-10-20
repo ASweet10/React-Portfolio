@@ -1,6 +1,6 @@
 import './App.css'
 import Home from './components/Home'
-import Tech from './components/Tech'
+import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
@@ -10,8 +10,8 @@ function App() {
       <div>
         <Navbar />
         <Home />
+        <About />
         <Projects />
-        <Tech />
         <Contact />
       </div>
   );
