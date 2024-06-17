@@ -3,6 +3,8 @@ import stockDashboardOne from '../images/stock-dashboard-1.png'
 import stockDashboardTwo from '../images/stock-dashboard-2.png'
 import ecommerce1 from '../images/ecommerce1.png'
 import ecommerce2 from '../images/ecommerce2.png'
+import food1 from '../images/food1.png'
+import food2 from '../images/food2.png'
 import gymSiteBlog from '../images/MERN-gym-blog.png'
 import gymSiteClasses from '../images/MERN-gym-classes.png'
 import { FaGithub } from 'react-icons/fa'
@@ -21,8 +23,8 @@ export default function Projects() {
       demoUrl: 'https://mern-gym-frontend-asweet10.vercel.app',
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
     },
-    { id: 2, src1: gymSiteBlog, src2: gymSiteClasses, title: 'Social Media Site', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
-      desc: '',
+    { id: 2, src1: food1, src2: food2, title: 'Grubhub Clone', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
+      desc: 'Food ordering app built using the MERN stack. Includes admin panel to manage products and prices',
       demoUrl: 'https://sorting-visualizer-107.netlify.app',
       sourceURL: 'https://github.com/ASweet10/SortingVisualizer',
     },    
