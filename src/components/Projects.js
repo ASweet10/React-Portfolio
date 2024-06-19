@@ -1,34 +1,30 @@
 import React from 'react'
-import stockDashboardOne from '../images/stock-dashboard-1.png'
-import stockDashboardTwo from '../images/stock-dashboard-2.png'
-import ecommerce1 from '../images/ecommerce1.png'
-import ecommerce2 from '../images/ecommerce2.png'
-import food1 from '../images/food1.png'
-import food2 from '../images/food2.png'
-import gymSiteBlog from '../images/MERN-gym-blog.png'
-import gymSiteClasses from '../images/MERN-gym-classes.png'
 import { FaGithub } from 'react-icons/fa'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 
 export default function Projects() {
-
+  const baseS3URL = "https://react-portfolio11.s3.us-east-2.amazonaws.com/"
   const projects = [
-    { id: 0, src1: ecommerce1, src2: ecommerce2, title: 'E-Commerce', tools:[ "HTML/CSS", "React", "Tailwind", "Sanity" ],
+    { id: 0, title: 'E-Commerce', tools:[ "HTML/CSS", "React", "Tailwind", "Sanity" ],
+      src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
       desc: 'E-Commerce site built using React and Sanity CMS. User can add/remove/update items in cart',
       demoUrl: '',
       sourceURL: 'https://github.com/ASweet10/ecommerce',
     },
-    { id: 1, src1: gymSiteBlog, src2: gymSiteClasses, title: 'Gym Website', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
+    { id: 1, title: 'Gym Website', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
+      src1: baseS3URL+"MERN-gym-classes.png", src2: baseS3URL+"MERN-gym-blog.png",
       desc: 'Gym website built using the MERN stack. Learned how to use AWS S3 and CloudFront CDN to serve blog images.',
       demoUrl: 'https://mern-gym-frontend-asweet10.vercel.app',
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
     },
-    { id: 2, src1: food1, src2: food2, title: 'Grubhub Clone', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
+    { id: 2, title: 'Grubhub Clone', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
+      src1: baseS3URL+"food1.png", src2: baseS3URL+"food2.png",
       desc: 'Food ordering app built using the MERN stack. Includes admin panel to manage products and prices',
       demoUrl: 'https://sorting-visualizer-107.netlify.app',
       sourceURL: 'https://github.com/ASweet10/SortingVisualizer',
     },    
-    { id: 3, src1: stockDashboardOne, src2: stockDashboardTwo, title: 'Stock Dashboard', tools:[ "Python", "DASH", "Plotly.js" ],
+    { id: 3, title: 'Stock Dashboard', tools:[ "Python", "DASH", "Plotly.js" ],
+      src1: baseS3URL+"stock-dashboard-1.png", src2: baseS3URL+"stock-dashboard-2.png",
       desc: 'Stock market investment tool which includes price chart, metrics, investor sentiment,' + 
       ' volume visualization, and news articles.',
       demoUrl: 'https://stockdashboard-406v.onrender.com',
@@ -65,7 +61,7 @@ export default function Projects() {
                       <div className='flex flex-row flex-wrap w-full gap-2 justify-left pl-6'>
                         {tools && tools.map((tool) => {
                           return(
-                            <div className='rounded-lg bg-project-tools-bg'>
+                            <div  className='rounded-lg bg-project-tools-bg'>
                               <h1 className='text-text text-center p-3'>{tool}</h1>
                             </div>
                           )
