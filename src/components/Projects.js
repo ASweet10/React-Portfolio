@@ -8,7 +8,7 @@ export default function Projects() {
     { id: 0, title: 'E-Commerce', tools:[ "HTML/CSS", "React", "Tailwind", "Sanity" ],
       src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
       desc: 'E-Commerce site built using React and Sanity CMS. User can add/remove/update items in cart',
-      demoUrl: '',
+      demoUrl: 'https://react-ecommerce-ozxxl8raz-asweet10.vercel.app',
       sourceURL: 'https://github.com/ASweet10/ecommerce',
     },
     { id: 1, title: 'Gym Website', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
