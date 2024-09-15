@@ -18,7 +18,7 @@ export default function Projects() {
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
     },
     { id: 2, title: 'Grubhub Clone', tools:[ "HTML/CSS", "React", "Tailwind", "MongoDB", "Express" ],
-      src1: baseS3URL+"food1.png", src2: baseS3URL+"food2.png",
+      src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
       desc: 'Food ordering app built using the MERN stack. Includes admin panel to manage products and prices',
       demoUrl: 'https://sorting-visualizer-107.netlify.app',
       sourceURL: 'https://github.com/ASweet10/SortingVisualizer',
