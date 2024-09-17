@@ -17,18 +17,18 @@ export default function Projects() {
       demoUrl: 'https://mern-gym-frontend-asweet10.vercel.app',
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
     },
-    { id: 2, title: 'Grubhub Clone', tools:[ "HTML/CSS", "NextJS", "Tailwind", "MongoDB", "Express" ],
+    { id: 2, title: 'Restaurant Site', tools:[ "HTML/CSS", "NextJS", "Tailwind", "MongoDB", "Express" ],
       src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
       desc: 'Food ordering app built using NextJS, MongoDB, and AWS S3. Includes admin panel to manage products and prices',
-      demoUrl: 'https://sorting-visualizer-107.netlify.app',
-      sourceURL: 'https://github.com/ASweet10/SortingVisualizer',
+      demoUrl: 'next-js-food-order-el-rey.vercel.app',
+      sourceURL: 'https://github.com/ASweet10/NextJS_FoodOrder',
     },    
     { id: 3, title: 'Stock Dashboard', tools:[ "Python", "DASH", "Plotly.js" ],
       src1: baseS3URL+"stock-dashboard-1.png", src2: baseS3URL+"stock-dashboard-2.png",
       desc: 'Stock market investment tool which includes price chart, metrics, investor sentiment,' + 
       ' volume visualization, and news articles.',
       demoUrl: 'https://stockdashboard-406v.onrender.com',
-      sourceURL: 'https://github.com/ASweet10/StockDashboard',
+      sourceURL: 'https://github.com/ASweet10/SchoolProjects/tree/main/StockDashboard',
     },
   ]
 
