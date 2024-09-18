@@ -23,12 +23,11 @@ export default function Projects() {
       demoUrl: 'next-js-food-order-el-rey.vercel.app',
       sourceURL: 'https://github.com/ASweet10/NextJS_FoodOrder',
     },    
-    { id: 3, title: 'Stock Dashboard', tools:[ "Python", "DASH", "Plotly.js" ],
-      src1: baseS3URL+"stock-dashboard-1.png", src2: baseS3URL+"stock-dashboard-2.png",
-      desc: 'Stock market investment tool which includes price chart, metrics, investor sentiment,' + 
-      ' volume visualization, and news articles.',
-      demoUrl: 'https://stockdashboard-406v.onrender.com',
-      sourceURL: 'https://github.com/ASweet10/SchoolProjects/tree/main/StockDashboard',
+    { id: 3, title: 'School Projects', tools:[ "HTML/CSS", "JavaScript", "Python", "DASH", "Plotly.js" ],
+      src1: baseS3URL+"stock-dashboard-1.png", src2: baseS3URL+"sorting_visualizer.png",
+      desc: 'Some of the projects I made in school. A stock market dashboard for research' + 
+      ' and a visualizer for popular sorting algorithms.',
+      sourceURL: 'https://github.com/ASweet10/SchoolProjects/tree/main',
     },
   ]
 
@@ -68,17 +67,28 @@ export default function Projects() {
                         })}
                       </div>
 
-                      <div className='flex p-6 items-center justify-left gap-6'>
-                        <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center'>
-                          <h1 className='pr-2'>Demo</h1>
-                          <BsBoxArrowUpRight size={'20px'} />
-                        </a>
-                        <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
-                          <h1 className='pr-2'>Code</h1>
-                          <FaGithub size={'20px'} />
-                        </a>
-                      </div>
-                      
+                      { demoUrl && (
+                        <div className='flex p-6 items-center justify-left gap-6'>
+                          <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                            <h1 className='pr-2'>Demo</h1>
+                            <BsBoxArrowUpRight size={'20px'} />
+                          </a>
+                          <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                            <h1 className='pr-2'>Code</h1>
+                            <FaGithub size={'20px'} />
+                          </a>
+                        </div>
+                      )}
+
+                      { !demoUrl && (
+                        <div className='flex p-6 items-center justify-left gap-6'>
+                          <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                            <h1 className='pr-2'>Code</h1>
+                            <FaGithub size={'20px'} />
+                          </a>
+                        </div>
+                      )}
+
                     </div>
                   </div>
               </div>
