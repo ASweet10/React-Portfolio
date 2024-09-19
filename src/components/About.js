@@ -12,7 +12,7 @@ export default function About() {
               I'm currently tackling AWS and Docker and building new apps using Next.js and TypeScript.
             </p>
           </div>
-          <div className="w-1/2 mx-auto flex gap-2">
+          <div className="w-1/2 flex gap-2">
             <a target="blank" href="https://github.com/ASweet10"className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
               <div className='flex flex-row items-center gap-2'>
                 <h1 className='text-xl font-semibold mt-2'>GitHub</h1>

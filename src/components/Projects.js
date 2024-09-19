@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { FaGithub } from 'react-icons/fa'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
+import { motion, useInView } from "framer-motion"
+
+const fadeInAnimationVariants = {
+  initial: { opacity: 0, y: 100 },
+  animate: (index) => ({ opacity: 1, y: 0, transition: {
+      delay: 0.05 * index
+    }
+  })
+}
 
 export default function Projects() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
   const baseS3URL = "https://react-portfolio11.s3.us-east-2.amazonaws.com/"
   const projects = [
     { id: 0, title: 'E-Commerce', tools:[ "HTML/CSS", "React", "Tailwind", "Sanity" ],
@@ -39,61 +51,62 @@ export default function Projects() {
             <p className='text-4xl font-bold inline text-center'>Projects</p>
           </div>
 
-          <div className='flex flex-col gap-12'>
-            {projects.map(({id, src1, src2, title, desc, demoUrl, sourceURL, tools}) => {
-              return(
-                <div key={id} className='flex flex-col md:flex-row'>
-                  <div className='rounded-md h-40 md:h-72 md:w-1/2 w-full object-cover overflow-hidden relative'>
-                    <img src={ src1 }  alt="Something went wrong" 
-                        className='w-full h-full object-cover absolute z-10 transition-transform duration-300 transform hover:scale-110'
-                    />
-                    <img src={ src2 } alt="Something went wrong"
-                        className='w-full h-full object-cover absolute z-20 opacity-0 transition-opacity duration-300 transform hover:opacity-100'
-                    />
-                  </div>
+          <div className='flex flex-col gap-12' ref={ref}>
+            {projects.map(({id, src1, src2, title, desc, demoUrl, sourceURL, tools}) => (
+              <motion.div className='flex flex-col md:flex-row' key={id} 
+                variants={fadeInAnimationVariants} initial="initial" whileInView="animate"
+                viewport={{ once: true}} custom={id}
+              >
+                <div className='rounded-md h-40 md:h-72 md:w-1/2 w-full object-cover overflow-hidden relative'>
+                  <img src={ src1 }  alt="Something went wrong" 
+                      className='w-full h-full object-cover absolute z-10 transition-transform duration-300 transform hover:scale-110'
+                  />
+                  <img src={ src2 } alt="Something went wrong"
+                      className='w-full h-full object-cover absolute z-20 opacity-0 transition-opacity duration-300 transform hover:opacity-100'
+                  />
+                </div>
 
-                  {/* <img src={src1} alt="" className='rounded-md h-48 w-96 object-cover' /> */}
-                  <div className='flex flex-col md:w-1/2 w-full'>
-                    <h1 className='text-left pl-6 pt-3 md:pt-0 text-2xl font-bold'>{title}</h1>
-                    <div>
-                      <div className='mx-6 my-6 text-lg'><p>{desc}</p></div>
-                      <div className='flex flex-row flex-wrap w-full gap-2 justify-left pl-6'>
-                        {tools && tools.map((tool) => {
-                          return(
-                            <div  className='rounded-lg bg-project-tools-bg'>
-                              <h1 className='text-text text-center p-3'>{tool}</h1>
-                            </div>
-                          )
-                        })}
-                      </div>
-
-                      { demoUrl && (
-                        <div className='flex p-6 items-center justify-left gap-6'>
-                          <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center'>
-                            <h1 className='pr-2'>Demo</h1>
-                            <BsBoxArrowUpRight size={'20px'} />
-                          </a>
-                          <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
-                            <h1 className='pr-2'>Code</h1>
-                            <FaGithub size={'20px'} />
-                          </a>
-                        </div>
-                      )}
-
-                      { !demoUrl && (
-                        <div className='flex p-6 items-center justify-left gap-6'>
-                          <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
-                            <h1 className='pr-2'>Code</h1>
-                            <FaGithub size={'20px'} />
-                          </a>
-                        </div>
-                      )}
-
+                {/* <img src={src1} alt="" className='rounded-md h-48 w-96 object-cover' /> */}
+                <div className='flex flex-col md:w-1/2 w-full'>
+                  <h1 className='text-left pl-6 pt-3 md:pt-0 text-2xl font-bold'>{title}</h1>
+                  <div>
+                    <div className='mx-6 my-6 text-lg'><p>{desc}</p></div>
+                    <div className='flex flex-row flex-wrap w-full gap-2 justify-left pl-6'>
+                      {tools && tools.map((tool) => {
+                        return(
+                          <div  className='rounded-lg bg-project-tools-bg'>
+                            <h1 className='text-text text-center p-3'>{tool}</h1>
+                          </div>
+                        )
+                      })}
                     </div>
+
+                    { demoUrl && (
+                      <div className='flex p-6 items-center justify-left gap-6'>
+                        <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                          <h1 className='pr-2'>Demo</h1>
+                          <BsBoxArrowUpRight size={'20px'} />
+                        </a>
+                        <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                          <h1 className='pr-2'>Code</h1>
+                          <FaGithub size={'20px'} />
+                        </a>
+                      </div>
+                    )}
+
+                    { !demoUrl && (
+                      <div className='flex p-6 items-center justify-left gap-6'>
+                        <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center'>
+                          <h1 className='pr-2'>Code</h1>
+                          <FaGithub size={'20px'} />
+                        </a>
+                      </div>
+                    )}
+
                   </div>
-              </div>
-              )
-            })}
+                </div>
+              </motion.div>
+            ))}
 </div>
         </div>
 
