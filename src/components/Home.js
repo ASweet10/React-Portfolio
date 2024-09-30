@@ -1,8 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
+import { motion, useInView } from "framer-motion"
+
+const techVariants = {
+  animate: {
+    transition: {
+      repeat: Infinity,
+      repeatDelay: 2,
+    },
+  }
+}
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
   const baseS3URL = "https://react-portfolio11.s3.us-east-2.amazonaws.com/"
+
+  const ref = useRef(null)
+  const isInView = useInView(ref)
 
   const toggle = () => {
       setIsOpen(!isOpen)
@@ -25,22 +38,21 @@ export default function Home() {
         <div className='flex flex-col justify-center h-full'>
           <h2 className='text-3xl sm:text-5xl font-bold '>Full-Stack Web Developer</h2>
           <h3 className='text-2xl sm:text-xl py-4 mt-4'>
-          Hi, I'm Aaron Sweet. I'm a Full-Stack Dev based in Milwaukee, Wisconsin. <br></br>
+            Hi, I'm Aaron Sweet. I'm a Full-Stack Dev based in Milwaukee, Wisconsin. <br></br>
           </h3>
 
-          <div className='flex flex-col md:flex-row py-8 items-center'>
-            <h3 className='text-xl font-bold pb-4 md:pr-4'>Tech Stack</h3>
-            <div className='flex flex-wrap gap-1 md:gap-4 text-center'>
-            { technologies.map(({id, src, title, style}) => {
-                return(
-                  <div key={id} className="py-2 rounded-lg">
-                      <img src={src} alt='tech' className='w-12' />
-                  </div>
-              )})
-            }
-            </div>
+          <div className='flex flex-col py-4 items-center mx-4'>
+            <h3 className='text-xl font-bold pb-8 md:pr-4'>Tech Stack</h3>
+            <motion.div initial={{ y: 0 }} whileInView={{ y: -20, transition: { duration: 3, repeat: Infinity, repeatType: 'reverse', staggerChildren: 0.5  }}} className='flex flex-wrap gap-2 md:gap-4 text-center'>
+              { technologies.map(({id, src, title, style}) => {
+                  return(
+                    <motion.div key={id} className="py-2 rounded-lg" >
+                        <img src={src} alt='tech' className='w-12' />
+                    </motion.div>
+                )})
+              }
+            </motion.div>
           </div>
-
         </div>
       </div>
     </div>

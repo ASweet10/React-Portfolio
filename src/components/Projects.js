@@ -58,8 +58,7 @@ export default function Projects() {
                 viewport={{ once: true}} custom={id}
               >
                 <div className='rounded-md h-40 md:h-72 md:w-1/2 w-full object-cover overflow-hidden relative'>
-                  <img src={ src1 }  alt="Something went wrong" 
-                      className='w-full h-full object-cover absolute z-10 transition-transform duration-300 transform hover:scale-110'
+                  <img src={src1} alt="Something went wrong" className='w-full h-full object-cover absolute z-10 transition-transform duration-300 transform hover:scale-110'
                   />
                   <img src={ src2 } alt="Something went wrong"
                       className='w-full h-full object-cover absolute z-20 opacity-0 transition-opacity duration-300 transform hover:opacity-100'

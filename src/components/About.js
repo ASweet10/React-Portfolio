@@ -1,11 +1,17 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { motion, useInView } from "framer-motion"
+import { useRef } from 'react'
 
 export default function About() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   return (
-    <div name="about" className='h-full w-full bg-background dark:bg-darkBackground text-darkText dark:text-text'>
+    <div name="about" className='h-full w-full dark:bg-darkBackground text-darkText dark:text-text'>
       <div className='max-w-screen-lg px-8 mx-auto flex flex-col items-center justify-center'>
-        <div className='mt-20'> {/* Navbar offset */}
+        <motion.div className='mt-20' viewport={{ once: true, amount: 0.5 }} transition={{ duration: 1 }}
+          initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+        > {/* Navbar offset */}
           <div className='pb-2 text-center md:text-left'>
             <p className='text-4xl font-bold'>About Me</p>
             <p className='text-xl font-bold my-3'>I enjoy developing software and learning new things.
@@ -28,7 +34,7 @@ export default function About() {
               </div>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

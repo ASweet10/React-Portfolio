@@ -16,16 +16,13 @@ export default function Navbar() {
   ]
 
   return (
-    <div className='flex justify-between items-center w-full h-20 px-4 fixed bg-background dark:bg-darkBackground text-darkText dark:text-text'>
-      <div>
-        <h1 className='text-lg font-signature md:ml-8 text-darkText dark:text-text'>AaronSweet.dev</h1>
-      </div>
-
+    <div className='z-20 flex justify-between items-center w-full h-20 px-8 md:px-24 fixed bg-background dark:bg-darkBackground text-darkText dark:text-text'>
+      <h1 className='text-lg md:text-2xl font-signature md:ml-8 text-darkText dark:text-text'>AaronSweet.dev</h1>
       <div className='flex flex-row'>
         <ul className='hidden md:flex'>
           {navLinks.map(({ id, link }) => {
             return(
-              <li key={id} className='px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200 text-darkText dark:text-text'>
+              <li key={id} className='px-4 text-xl cursor-pointer capitalize font-medium hover:scale-105 duration-200 text-darkText dark:text-text'>
                 <Link to={link} smooth duration={500}>{link}</Link>
               </li>
             )})}
