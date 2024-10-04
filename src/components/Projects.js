@@ -32,7 +32,7 @@ export default function Projects() {
     { id: 2, title: 'Restaurant Site', tools:[ "HTML/CSS", "NextJS", "Tailwind", "MongoDB", "Express" ],
       src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
       desc: 'Food ordering app built using NextJS, MongoDB, and AWS S3. Includes admin panel to manage products and prices',
-      demoUrl: 'next-js-food-order-el-rey.vercel.app',
+      demoUrl: 'https://next-js-food-order-el-rey.vercel.app',
       sourceURL: 'https://github.com/ASweet10/NextJS_FoodOrder',
     },    
     { id: 3, title: 'School Projects', tools:[ "HTML/CSS", "JavaScript", "Python", "DASH", "Plotly.js" ],
