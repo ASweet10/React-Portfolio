@@ -26,10 +26,11 @@ export default function Home() {
     { id: 2, src: baseS3URL + "css-3.png" },
     { id: 3, src: baseS3URL + "js.png" },
     { id: 4, src: baseS3URL + "React-icon.svg.png" },
-    { id: 5, src: baseS3URL + "nodejs.png" },
-    { id: 6, src: baseS3URL + "Tailwind_CSS_Logo.svg.png" },
-    { id: 7, src: baseS3URL + "MongoDB-Logo-500x313.png" },
-    { id: 8, src: baseS3URL + "mysqllogo.png"}
+    { id: 5, src: baseS3URL + "ts-logo-128.png"},
+    { id: 6, src: baseS3URL + "nodejs.png" },
+    { id: 7, src: baseS3URL + "Tailwind_CSS_Logo.svg.png" },
+    { id: 8, src: baseS3URL + "MongoDB-Logo-500x313.png" },
+    { id: 9, src: baseS3URL + "mysqllogo.png"},
   ]
 
   return (
@@ -42,16 +43,16 @@ export default function Home() {
           </h3>
 
           <div className='flex flex-col py-4 items-center mx-4'>
-            <h3 className='text-xl font-bold pb-8 md:pr-4'>Tech Stack</h3>
-            <motion.div initial={{ y: 0 }} whileInView={{ y: -20, transition: { duration: 3, repeat: Infinity, repeatType: 'reverse', staggerChildren: 0.5  }}} className='flex flex-wrap gap-2 md:gap-4 text-center'>
+            <h3 className='text-xl font-bold pb-2 md:pr-4'>Tech Stack</h3>
+            <div className='flex flex-wrap gap-2 md:gap-4 text-center'>
               { technologies.map(({id, src, title, style}) => {
                   return(
-                    <motion.div key={id} className="py-2 rounded-lg" >
+                    <div key={id} className="py-2 rounded-lg" >
                         <img src={src} alt='tech' className='w-12' />
-                    </motion.div>
+                    </div>
                 )})
               }
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

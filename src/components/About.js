@@ -7,7 +7,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <div name="about" className='h-full w-full dark:bg-darkBackground text-darkText dark:text-text'>
+    <div name="about" className='h-full w-full dark:bg-darkBackground bg-background text-darkText dark:text-text'>
       <div className='max-w-screen-lg px-8 mx-auto flex flex-col items-center justify-center'>
         <motion.div className='mt-20' viewport={{ once: true, amount: 0.5 }} transition={{ duration: 1 }}
           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
@@ -15,7 +15,7 @@ export default function About() {
           <div className='pb-2 text-center md:text-left'>
             <p className='text-4xl font-bold'>About Me</p>
             <p className='text-xl font-bold my-3'>I enjoy developing software and learning new things.
-              I'm currently tackling AWS and Docker and building new apps using Next.js and TypeScript.
+              Currently I'm tackling AWS and Docker and building new apps using Next.js and TypeScript.
             </p>
           </div>
           <div className="w-1/2 flex gap-2">
