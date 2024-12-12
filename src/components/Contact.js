@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { IoMailOutline } from 'react-icons/io5'
 
 export default function Contact() {
   const [ query, setQuery ] = useState({ name: '', email: '', message: '', })
@@ -9,24 +10,23 @@ export default function Contact() {
   })
 
   return (
-    <div name='contact' className='h-full w-full py-16 bg-background dark:bg-darkBackground text-darkText dark:text-text'>
+    <div name='contact' className='h-full w-full py-16 bg-transparent text-darkText dark:text-text z-20 relative'>
       <div className='flex flex-col p-4 justify-center h-full w-full text-center'>
-          <p className='text-4xl font-bold inline text-center'>Contact</p>
           <div className="w-1/2 mx-auto flex gap-2 justify-center mt-8">
             <a target="blank" href="https://github.com/ASweet10"className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
               <div className='flex flex-row items-center gap-2'>
-                <h1 className='text-xl font-semibold mt-2'>GitHub</h1>
-                <FaGithub className='text-3xl'/>
+                <h1 className='text-xl font-semibold'>GitHub</h1>
+                <FaGithub className='text-2xl'/>
               </div>
             </a>
-            <a target="blank" href="https://www.linkedin.com/in/aaronsweet26/"className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
+            <a href="mailto:AaronSweet10@gmail.com" target="blank" className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
               <div className='flex flex-row gap-2'>
                 <div className='flex flex-row items-center gap-2'>
-                  <h1 className='text-xl font-semibold mt-2'>LinkedIn</h1>
-                  <FaLinkedin className='text-3xl text-blue-500'/>
+                  <h1 className='text-xl font-semibold'>Contact</h1>
+                  <IoMailOutline className='text-2xl'/>
                 </div>
               </div>
-            </a>
+             </a> 
           </div>
 
           {/*

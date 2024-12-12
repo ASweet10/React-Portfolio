@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class', /* Tell tailwind adding darkmode via class */
+  //darkMode: 'class', /* Tell tailwind adding darkmode via class */
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
-        'darkBackground': '#181818',
+        'darkBackground': '#121212',
         'background': '#f2f2f2',
         'darkText': '#121212',
         'text': '#dbdbdb',
@@ -20,6 +20,7 @@ module.exports = {
         'mongo': '#3fa037',
         'aws': '#db7900',
         'next': '#454545',
+        'typescript': '#3178C6',
       }
     },
     fontFamily: {

@@ -17,49 +17,57 @@ export default function Projects() {
 
   const baseS3URL = "https://react-portfolio11.s3.us-east-2.amazonaws.com/"
   const projects = [
-    { id: 0, title: 'Gym Website', src1: baseS3URL+"MERN-gym-classes.png", src2: baseS3URL+"MERN-gym-blog.png",
+    { id: 0, title: 'El Rey', src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
       tools: [ 
-        { name: "HTML/CSS", color: "bg-html" },
-        { name: "React", color: "bg-react" },
-        { name: "Tailwind", color: "bg-tailwind" },
-        { name: "MongoDB", color: "bg-mongo" },
-        { name: "AWS", color: "bg-aws"}
-      ],
-      desc: 'Gym website built using the MERN stack. Learned how to use AWS S3 and CloudFront CDN to serve blog images.',
-      demoUrl: 'https://mern-gym-frontend-asweet10.vercel.app',
-      sourceURL: 'https://github.com/ASweet10/MERN-gym',
-    },
-    { id: 1, title: 'Restaurant Site', src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
-      tools: [ 
-        { name: "HTML/CSS", color: "bg-html" },
         { name: "NextJS", color: "bg-next" },
         { name: "Tailwind", color: "bg-tailwind" },
         { name: "MongoDB", color: "bg-mongo" },
-        { name: "AWS", color: "bg-aws"}
+        { name: "AWS", color: "bg-aws"},
+        { name: "HTML/CSS", color: "bg-html" },
       ],
-      desc: 'Food ordering app with full Stripe integration; Includes admin panel to manage products and prices',
+      desc: 'Restaurant site with full Stripe integration; Includes admin panel for users, products, etc.',
       demoUrl: 'https://next-js-food-order-el-rey.vercel.app',
       sourceURL: 'https://github.com/ASweet10/NextJS_FoodOrder',
     },  
-    { id: 2, title: 'Basic E-Commerce', src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
+    { id: 1, title: 'Alpine', src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
       tools: [ 
-        { name: "HTML/CSS", color: "bg-html" },
         { name: "React", color: "bg-react" },
         { name: "Tailwind", color: "bg-tailwind" },
         { name: "MongoDB", color: "bg-mongo" },
+        { name: "HTML/CSS", color: "bg-html" },
       ],
       desc: 'Minimalist E-Commerce site. User can filter products and add/remove/update cart items',
       demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
       sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
     },  
-    { id: 3, title: 'School Projects', src1: baseS3URL+"stock-dashboard-1.png", src2: baseS3URL+"sorting_visualizer.png",
-      desc: 'Stock market research dashboard and a visualizer for popular sorting algorithms',
-      sourceURL: 'https://github.com/ASweet10/SchoolProjects/tree/main',
+    { id: 2, title: 'HomeHub', src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
+      tools: [ 
+        { name: "Next", color: "bg-next" },
+        { name: "TypeScript", color: "bg-typescript" },
+        { name: "Tailwind", color: "bg-tailwind" },
+        { name: "MongoDB", color: "bg-mongo" },
+        { name: "HTML/CSS", color: "bg-html" },
+      ],
+      desc: 'Real estate rental site. Users can search locations for properties & filter results',
+      demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
+      sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
     },
+    { id: 3, title: 'EliteFitness', src1: baseS3URL+"MERN-gym-classes.png", src2: baseS3URL+"MERN-gym-blog.png",
+      tools: [ 
+        { name: "React", color: "bg-react" },
+        { name: "Tailwind", color: "bg-tailwind" },
+        { name: "MongoDB", color: "bg-mongo" },
+        { name: "AWS", color: "bg-aws"},
+        { name: "HTML/CSS", color: "bg-html" },
+      ],
+      desc: 'Gym website built using the MERN stack, AWS, and CloudFront',
+      demoUrl: 'https://mern-gym-frontend-asweet10.vercel.app',
+      sourceURL: 'https://github.com/ASweet10/MERN-gym',
+    },  
   ]
 
   return (
-    <div name="projects" className='h-full w-full scroll-mt-96 bg-background dark:bg-darkBackground text-darkText dark:text-text'>
+    <div name="projects" className='h-full w-full scroll-mt-96 bg-transparent text-darkText dark:text-text z-20 relative'>
       <div className='max-w-screen-lg px-8 p-4 mx-auto flex flex-col justify-center h-full w-full'>
         <div className='mt-20'> {/* Navbar offset */}
           <div className='pb-8'>

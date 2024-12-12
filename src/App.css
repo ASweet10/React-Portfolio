@@ -12,7 +12,37 @@
   --primary-color: purple;
   --secondary-color: blue;
 }
-* {
-  margin: 0;
-  padding: 0;
+body {
+  overflow: overlay; /* For scrollbar from https://stackoverflow.com/questions/23200639/transparent-scrollbar-with-css */
+
+}
+
+#particles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* width */
+::-webkit-scrollbar * {
+  width: 10px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #181818;
+  border-radius: 12px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
