@@ -1,10 +1,11 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { useColorMode } from './useColorMode'
 
 export default function About() {
 
   return (
-    <div name="about" className='h-full w-full bg-transparent text-darkText dark:text-text z-20 relative'>
-      <div className='max-w-screen-lg px-8 mx-auto flex flex-col items-center justify-center'>
+    <div name="about" className='h-full w-full bg-transparent text-text z-20 relative'>
+      <div className='max-w-screen-lg px-12 mx-auto flex flex-col items-center justify-center'>
         <div className='mt-20'> {/* Navbar offset */}
           <div className='pb-2 text-center md:text-left'>
             <p className='text-4xl font-bold'>About Me</p>

@@ -4,12 +4,12 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
-import ParticlesComponent from 'components/Particles'
+import ParticleBackground from 'components/ParticleBackground'
 
 function App() {
   return (
       <div>
-        <ParticlesComponent id="particles" />
+        <ParticleBackground />
         <Navbar />
         <Home />
         <About />
