@@ -11,6 +11,7 @@ import { DiMongodb } from "react-icons/di"
 import { DiMysql } from "react-icons/di"
 import { TbBrandNextjs } from "react-icons/tb"
 
+
 const techVariants = {
   animate: {
     transition: {
@@ -32,16 +33,16 @@ export default function Home() {
   }
 
   const iconTechnologies = [
-    { id: 1, name: "HTML", icon: FaHtml5 },
-    { id: 2, name: "CSS", icon: FaCss3Alt },
-    { id: 3, name: "JavaScript", icon: IoLogoJavascript },
-    { id: 4, name: "React.js", icon: FaReact },
-    { id: 5, name: "TypeScript", icon: SiTypescript },
-    { id: 6, name: "NodeJS", icon: FaNodeJs },
-    { id: 7, name: "TailwindCSS", icon: SiTailwindcss },
-    { id: 8, name: "MongoDB", icon: DiMongodb },
-    { id: 9, name: "MySQL", icon: DiMysql },
-    { id: 10, name: "Next.js", icon: TbBrandNextjs },
+    { id: 1, hoverStyle: 'hover:text-html', name: "HTML", icon: FaHtml5 },
+    { id: 2, hoverStyle: 'hover:text-css', name: "CSS", icon: FaCss3Alt },
+    { id: 3, hoverStyle: 'hover:text-javascript', name: "JavaScript", icon: IoLogoJavascript },
+    { id: 4, hoverStyle: 'hover:text-react', name: "React.js", icon: FaReact },
+    { id: 5, hoverStyle: 'hover:text-typescript', name: "TypeScript", icon: SiTypescript },
+    { id: 6, hoverStyle: 'hover:text-nodejs', name: "NodeJS", icon: FaNodeJs },
+    { id: 7, hoverStyle: 'hover:text-tailwind', name: "TailwindCSS", icon: SiTailwindcss },
+    { id: 8, hoverStyle: 'hover:text-mongo', name: "MongoDB", icon: DiMongodb },
+    { id: 9, hoverStyle: 'hover:text-mysql', name: "MySQL", icon: DiMysql },
+    { id: 10, hoverStyle: 'hover:text-next', name: "Next.js", icon: TbBrandNextjs },
   ]
 
   return (
@@ -49,17 +50,17 @@ export default function Home() {
       <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row pr-8'>
         <div className='flex flex-col justify-center h-full'>
           <h2 className='text-3xl sm:text-5xl font-bold text-center'>Full-Stack Web Developer</h2>
-          <h3 className='text-2xl sm:text-xl py-4 mt-4 text-center'>
+          <h3 className='text-2xl sm:text-xl py-4 mt-4 text-center flex items-center'>
             Hi, I'm Aaron Sweet. I'm a Full-Stack Dev based in Milwaukee, Wisconsin. <br></br>
           </h3>
 
           <div className='flex flex-col py-4 items-center mx-4'>
-            <h3 className='text-xl font-bold pb-2 md:pr-4'>Tech Stack</h3>
+            {/* <h3 className='text-xl font-bold pb-2 md:pr-4'>Tech Stack</h3> */}
             <div className='grid grid-cols-2 md:grid-cols-5 gap-2 text-center max-w-lg'>
               { iconTechnologies.map((item, index) => {
                 return(
                   <div key={index} className="py-2 rounded-lg flex flex-col justify-center items-center text-center w-24" >
-                    <item.icon className='text-5xl'/>
+                    <item.icon className={`text-5xl ${item.hoverStyle}`}/>
                     <h1 className='text-base font-bold'>{item.name}</h1>
                   </div>
                 )})

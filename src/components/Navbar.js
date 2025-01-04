@@ -5,6 +5,8 @@ import { BsSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { useColorMode } from './useColorMode'
 import { color } from 'framer-motion'
 import ParticleBackground from 'components/ParticleBackground'
+import { MdOutlinePersonOutline } from "react-icons/md"
+import { LuMail } from "react-icons/lu"
 
 export default function Navbar() {
   const [ navOpen, setNavOpen ] = useState(false)
@@ -40,7 +42,7 @@ export default function Navbar() {
           <ul className='flex'>
             {navLinks.map(({ id, link }) => {
               return(
-                <li key={id} className={`px-2 text-lg cursor-pointer capitalize font-medium hover:scale-105 duration-200 ${ colorMode === 'dark' ? 'text-darkText' : 'text-text'}`}>
+                <li key={id} className={`px-2 text-lg cursor-pointer capitalize font-medium hover:scale-1 duration-200 ${ colorMode === 'dark' ? 'text-darkText' : 'text-text'} hover:text-gray-400`}>
                   <Link to={link} smooth duration={500}>{link}</Link>
                 </li>
               )})}
