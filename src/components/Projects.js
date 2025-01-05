@@ -76,7 +76,7 @@ export default function Projects() {
         { id: 4, name: "HTML/CSS", color: "bg-html" },
       ],
       desc: 'Gym website built using the MERN stack, AWS, and CloudFront',
-      demoUrl: 'https://mern-gym-frontend-asweet10.vercel.app',
+      demoUrl: 'https://mern-gym-frontend.vercel.app',
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
     },  
   ]
