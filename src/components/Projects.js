@@ -60,7 +60,7 @@ export default function Projects() {
         { id: 0, name: "Next", color: "bg-next" },
         { id: 1, name: "TypeScript", color: "bg-typescript" },
         { id: 2, name: "Tailwind", color: "bg-tailwind" },
-        { id: 3, name: "MongoDB", color: "bg-mongo" },
+        { id: 3, name: "MySQL", color: "bg-mysql" },
         { id: 4, name: "HTML/CSS", color: "bg-html" },
       ],
       desc: 'Real estate rental site. Users can search locations for properties & filter results',
@@ -75,10 +75,10 @@ export default function Projects() {
         { id: 3, name: "AWS", color: "bg-aws"},
         { id: 4, name: "HTML/CSS", color: "bg-html" },
       ],
-      desc: 'Gym website built using the MERN stack, AWS, and CloudFront',
+      desc: 'Gym website built using the MERN stack and AWS.',
       demoUrl: 'https://mern-gym-frontend.vercel.app',
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
-    },  
+    },
   ]
 
   return (

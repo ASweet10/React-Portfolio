@@ -28,6 +28,8 @@ module.exports = {
     },
     fontFamily: {
       signature: ["Roboto Slab"],
+      raleway: ["Raleway", 'sans-serif'],
+      bebas: ["Bebas Neue", 'sans-serif'],
     }
   },
   plugins: [],

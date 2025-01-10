@@ -33,16 +33,16 @@ export default function Home() {
   }
 
   const iconTechnologies = [
-    { id: 1, hoverStyle: 'hover:text-html', name: "HTML", icon: FaHtml5 },
-    { id: 2, hoverStyle: 'hover:text-css', name: "CSS", icon: FaCss3Alt },
-    { id: 3, hoverStyle: 'hover:text-javascript', name: "JavaScript", icon: IoLogoJavascript },
-    { id: 4, hoverStyle: 'hover:text-react', name: "React.js", icon: FaReact },
-    { id: 5, hoverStyle: 'hover:text-typescript', name: "TypeScript", icon: SiTypescript },
-    { id: 6, hoverStyle: 'hover:text-nodejs', name: "NodeJS", icon: FaNodeJs },
-    { id: 7, hoverStyle: 'hover:text-tailwind', name: "TailwindCSS", icon: SiTailwindcss },
-    { id: 8, hoverStyle: 'hover:text-mongo', name: "MongoDB", icon: DiMongodb },
-    { id: 9, hoverStyle: 'hover:text-mysql', name: "MySQL", icon: DiMysql },
-    { id: 10, hoverStyle: 'hover:text-next', name: "Next.js", icon: TbBrandNextjs },
+    { id: 1, hoverStyle: 'group-hover:cursor-pointer group-hover:text-html', name: "HTML", icon: FaHtml5 },
+    { id: 2, hoverStyle: 'group-hover:cursor-pointer group-hover:text-css', name: "CSS", icon: FaCss3Alt },
+    { id: 3, hoverStyle: 'group-hover:cursor-pointer group-hover:text-javascript', name: "JavaScript", icon: IoLogoJavascript },
+    { id: 4, hoverStyle: 'group-hover:cursor-pointer group-hover:text-react', name: "React.js", icon: FaReact },
+    { id: 5, hoverStyle: 'group-hover:cursor-pointer group-hover:text-typescript', name: "TypeScript", icon: SiTypescript },
+    { id: 6, hoverStyle: 'group-hover:cursor-pointer group-hover:text-nodejs', name: "NodeJS", icon: FaNodeJs },
+    { id: 7, hoverStyle: 'group-hover:cursor-pointer group-hover:text-tailwind', name: "TailwindCSS", icon: SiTailwindcss },
+    { id: 8, hoverStyle: 'group-hover:cursor-pointer group-hover:text-mongo', name: "MongoDB", icon: DiMongodb },
+    { id: 9, hoverStyle: 'group-hover:cursor-pointer group-hover:text-mysql', name: "MySQL", icon: DiMysql },
+    { id: 10, hoverStyle: 'group-hover:cursor-pointer group-hover:text-next', name: "Next.js", icon: TbBrandNextjs },
   ]
 
   return (
@@ -59,7 +59,7 @@ export default function Home() {
             <div className='grid grid-cols-2 md:grid-cols-5 gap-2 text-center max-w-lg'>
               { iconTechnologies.map((item, index) => {
                 return(
-                  <div key={index} className="py-2 rounded-lg flex flex-col justify-center items-center text-center w-24" >
+                  <div key={index} className="py-2 rounded-lg flex flex-col justify-center items-center text-center w-24 group" >
                     <item.icon className={`text-5xl ${item.hoverStyle}`}/>
                     <h1 className='text-base font-bold'>{item.name}</h1>
                   </div>
