@@ -57,11 +57,10 @@ export default function Projects() {
     },  
     { id: 2, title: 'HomeHub', src1: baseS3URL+"next_RealEstate1.png", src2: baseS3URL+"next_RealEstate2.jpg",
       tools: [ 
-        { id: 0, name: "Next", color: "bg-next" },
-        { id: 1, name: "TypeScript", color: "bg-typescript" },
+        { id: 0, name: "React", color: "bg-next" },
+        { id: 1, name: "HTML/CSS", color: "bg-html" },
         { id: 2, name: "Tailwind", color: "bg-tailwind" },
-        { id: 3, name: "MySQL", color: "bg-mysql" },
-        { id: 4, name: "HTML/CSS", color: "bg-html" },
+        { id: 3, name: "TypeScript", color: "bg-typescript" },
       ],
       desc: 'Real estate rental site. Users can search locations for properties & filter results',
       demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
@@ -83,7 +82,7 @@ export default function Projects() {
 
   return (
     <div name="projects" className={`h-full w-full scroll-mt-96 bg-transparent ${colorMode === 'dark' ? 'text-darkText' : 'text-text'} z-20 relative`}>
-      <div className='max-w-screen-lg px-8 p-4 mx-auto flex flex-col justify-center h-full w-full'>
+      <div className='max-w-screen-lg px-8 p-4 mx-auto flex flex-col justify-center h-full w-full text-center md:text-left'>
         <div className='mt-20'> {/* Navbar offset */}
           <div className='pb-8'>
             <p className='text-4xl font-bold inline text-center'>Projects</p>
@@ -105,10 +104,10 @@ export default function Projects() {
 
                 {/* <img src={src1} alt="" className='rounded-md h-48 w-96 object-cover' /> */}
                 <div className='flex flex-col md:w-1/2 w-full'>
-                  <h1 className='text-left pl-6 pt-3 md:pt-0 text-2xl font-bold'>{title}</h1>
+                  <h1 className='text-center md:text-left pl-6 pt-4 md:pt-0 text-2xl font-bold'>{title}</h1>
                   <div>
-                    <div className='mx-6 my-6 text-lg'><p>{desc}</p></div>
-                    <div className='flex flex-row flex-wrap w-full gap-2 justify-left pl-6'>
+                    <div className='mx-6 my-4 text-center md:text-left text-lg'><p>{desc}</p></div>
+                    <div className='flex flex-row flex-wrap w-full gap-2 justify-center md:justify-start md:pl-6'>
                       {tools && tools.map(({id, name, color}) => {
                         return(
                           <div className={`rounded-lg ${color}`} key={id}>
@@ -118,38 +117,23 @@ export default function Projects() {
                       })}
                     </div>
 
-                    { demoUrl && (
-                      <div className='flex p-6 items-center justify-left gap-6'>
-                        <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button'>
-                          <h1 className='pr-2'>Demo</h1>
-                          <BsBoxArrowUpRight size={'20px'} />
-                        </a>
-                        <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button'>
-                          <h1 className='pr-2'>Code</h1>
-                          <FaGithub size={'20px'} />
-                        </a>
-                      </div>
-                    )}
-
-                    { !demoUrl && (
-                      <div className='flex p-6 items-center justify-left gap-6'>
-                        <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button'>
-                          <h1 className='pr-2'>Code</h1>
-                          <FaGithub size={'20px'} />
-                        </a>
-                      </div>
-                    )}
+                    <div className='flex pt-6 md:py-6 items-center justify-start gap-4'>
+                      <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button'>
+                        <h1 className='pr-2'>Demo</h1>
+                        <BsBoxArrowUpRight size={'20px'} />
+                      </a>
+                      <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button'>
+                        <h1 className='pr-2'>Code</h1>
+                        <FaGithub size={'20px'} />
+                      </a>
+                    </div>
 
                   </div>
                 </div>
               </motion.div>
             ))}
-</div>
+          </div>
         </div>
-
-
-
-
       </div>
     </div>
   )

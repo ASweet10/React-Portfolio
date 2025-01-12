@@ -37,12 +37,12 @@ export default function Home() {
     { id: 2, hoverStyle: 'group-hover:cursor-pointer group-hover:text-css', name: "CSS", icon: FaCss3Alt },
     { id: 3, hoverStyle: 'group-hover:cursor-pointer group-hover:text-javascript', name: "JavaScript", icon: IoLogoJavascript },
     { id: 4, hoverStyle: 'group-hover:cursor-pointer group-hover:text-react', name: "React.js", icon: FaReact },
-    { id: 5, hoverStyle: 'group-hover:cursor-pointer group-hover:text-typescript', name: "TypeScript", icon: SiTypescript },
-    { id: 6, hoverStyle: 'group-hover:cursor-pointer group-hover:text-nodejs', name: "NodeJS", icon: FaNodeJs },
-    { id: 7, hoverStyle: 'group-hover:cursor-pointer group-hover:text-tailwind', name: "TailwindCSS", icon: SiTailwindcss },
-    { id: 8, hoverStyle: 'group-hover:cursor-pointer group-hover:text-mongo', name: "MongoDB", icon: DiMongodb },
-    { id: 9, hoverStyle: 'group-hover:cursor-pointer group-hover:text-mysql', name: "MySQL", icon: DiMysql },
-    { id: 10, hoverStyle: 'group-hover:cursor-pointer group-hover:text-next', name: "Next.js", icon: TbBrandNextjs },
+    { id: 5, hoverStyle: 'group-hover:cursor-pointer group-hover:text-next', name: "Next.js", icon: TbBrandNextjs },
+    { id: 6, hoverStyle: 'group-hover:cursor-pointer group-hover:text-typescript', name: "TypeScript", icon: SiTypescript },
+    { id: 7, hoverStyle: 'group-hover:cursor-pointer group-hover:text-nodejs', name: "NodeJS", icon: FaNodeJs },
+    { id: 8, hoverStyle: 'group-hover:cursor-pointer group-hover:text-tailwind', name: "TailwindCSS", icon: SiTailwindcss },
+    { id: 9, hoverStyle: 'group-hover:cursor-pointer group-hover:text-mongo', name: "MongoDB", icon: DiMongodb },
+    { id: 10, hoverStyle: 'group-hover:cursor-pointer group-hover:text-mysql', name: "MySQL", icon: DiMysql },
   ]
 
   return (
@@ -60,7 +60,7 @@ export default function Home() {
               { iconTechnologies.map((item, index) => {
                 return(
                   <div key={index} className="py-2 rounded-lg flex flex-col justify-center items-center text-center w-24 group" >
-                    <item.icon className={`text-5xl ${item.hoverStyle}`}/>
+                    <item.icon className={`text-5xl hover:scale-95 hover:-translate-y-1 ${item.hoverStyle}`}/>
                     <h1 className='text-base font-bold'>{item.name}</h1>
                   </div>
                 )})

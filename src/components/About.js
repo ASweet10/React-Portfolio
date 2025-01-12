@@ -10,7 +10,7 @@ export default function About() {
           <div className='pb-2 text-center md:text-left'>
             <p className='text-4xl font-bold'>About Me</p>
             <p className='text-xl font-bold my-3'>I enjoy developing software and learning new things.
-              Currently I'm tackling AWS and Docker and building new apps using Next.js and TypeScript.
+              Currently I'm improving my TypeScript skills and learning more about Docker, AWS, and frontend design.
             </p>
           </div>
           <div className="w-1/2 flex gap-2">

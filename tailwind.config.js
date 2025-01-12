@@ -13,7 +13,7 @@ module.exports = {
         'button-dark': '#15316b',
         'button-light': '#3b77f5',
         'button-hover': '#161616',
-        'html': '#f23000',
+        'html': '#f06529',
         'css': '#264de4',
         'javascript': '#F7DF1E',
         'react': '#61DBFB',
