@@ -56,7 +56,7 @@ export default function Projects() {
       demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
       sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
     },  
-    { id: 2, title: 'HomeHub', src1: baseS3URL+"next_RealEstate1.png", src2: baseS3URL+"next_RealEstate2.jpg",
+    { id: 2, title: 'RentPro', src1: baseS3URL+"next_RealEstate1.png", src2: baseS3URL+"next_RealEstate2.jpg",
       tools: [ 
         { id: 0, name: "React", color: "bg-react" },
         { id: 1, name: "HTML/CSS", color: "bg-html" },
@@ -64,8 +64,8 @@ export default function Projects() {
         { id: 3, name: "TypeScript", color: "bg-typescript" },
       ],
       desc: 'Real estate rental site. Users can search locations for properties & filter results',
-      demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
-      sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
+      demoUrl: 'https://react-real-estate-tau.vercel.app',
+      sourceURL: 'https://github.com/ASweet10/React-RealEstate',
     },
     { id: 3, title: 'EliteFitness', src1: baseS3URL+"MERN-gym-classes.png", src2: baseS3URL+"MERN-gym-blog.png",
       tools: [ 
