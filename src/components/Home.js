@@ -49,9 +49,10 @@ export default function Home() {
     <div name="home" className='w-full h-screen bg-transparent text-darkText dark:text-text z-20 relative'>
       <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row pr-8'>
         <div className='flex flex-col justify-center h-full'>
-          <h2 className='text-3xl sm:text-5xl font-bold text-center'>Full-Stack Web Developer</h2>
-          <h3 className='text-2xl sm:text-xl py-4 mt-4 text-center flex items-center'>
-            Hi, I'm Aaron Sweet. I'm a Full-Stack Dev based in Milwaukee, Wisconsin. <br></br>
+          <h2 className='text-3xl sm:text-5xl font-bold text-center'>Hello, I'm Aaron</h2>
+          <h3 className='text-2xl sm:text-xl py-4 mt-4 text-center max-w-xl'>
+            I'm a Full-Stack Dev based in Milwaukee, Wisconsin.
+            <br></br>
           </h3>
 
           <div className='flex flex-col py-4 items-center mx-4'>

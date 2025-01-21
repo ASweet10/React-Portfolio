@@ -39,6 +39,8 @@ export default function Projects() {
         { id: 2, name: "Tailwind", color: "bg-tailwind" },
         { id: 3, name: "MongoDB", color: "bg-mongo" },
         { id: 4, name: "AWS", color: "bg-aws"},
+        { id: 5, name: "Node", color: "bg-nodejs" },
+        { id: 6, name: "Express", color: "bg-nodejs"},  
 
       ],
       desc: 'Restaurant site with full Stripe integration; Includes admin panel for users, products, etc.',
@@ -51,6 +53,8 @@ export default function Projects() {
         { id: 1, name: "HTML/CSS", color: "bg-html" },
         { id: 2, name: "Tailwind", color: "bg-tailwind" },
         { id: 3, name: "MongoDB", color: "bg-mongo" },
+        { id: 4, name: "Node", color: "bg-nodejs" },
+        { id: 5, name: "Express", color: "bg-nodejs"},  
       ],
       desc: 'Minimalist E-Commerce site. User can filter products and add/remove/update cart items',
       demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
@@ -74,8 +78,10 @@ export default function Projects() {
         { id: 2, name: "Tailwind", color: "bg-tailwind" },
         { id: 3, name: "MongoDB", color: "bg-mongo" },
         { id: 4, name: "AWS", color: "bg-aws"},
+        { id: 5, name: "Node", color: "bg-nodejs" },
+        { id: 6, name: "Express", color: "bg-nodejs"},  
       ],
-      desc: 'Gym website built using the MERN stack and AWS.',
+      desc: 'Gym website built using the MERN stack. Uses JWT for user authentication',
       demoUrl: 'https://mern-gym-frontend.vercel.app',
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
     },
@@ -119,11 +125,11 @@ export default function Projects() {
                     </div>
 
                     <div className='flex pt-6 md:py-6 items-center justify-start gap-4'>
-                      <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button'>
-                        <h1 className='pr-2'>Demo</h1>
+                      <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
+                        <h1 className='pr-2 '>Demo</h1>
                         <BsBoxArrowUpRight size={'20px'} />
                       </a>
-                      <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button'>
+                      <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
                         <h1 className='pr-2'>Code</h1>
                         <FaGithub size={'20px'} />
                       </a>
