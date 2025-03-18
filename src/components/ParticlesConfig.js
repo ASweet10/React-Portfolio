@@ -48,11 +48,11 @@
         },
         options: {
           background: {
-            color: "#f2f2f2"
+            color: "#121212"
           },
           particles: {
             color: {
-              value: "#121212"
+              value: "#f2f2f2"
             }
           }
         }

@@ -1,11 +1,9 @@
 import React, { useEffect, useState, useCallback } from "react"
 import Particles, { initParticlesEngine } from "@tsparticles/react"
 //import ParticlesConfig from "./ParticlesConfig"
-
 import { loadSlim } from "@tsparticles/slim"
 
-const ParticleBackground = ({ propTheme }) => {
-  const [ theme, setTheme ] = useState('dark')
+const ParticleBackground = () => {
   const [ particlesContainer, setParticlesContainer ] = useState()
   const [init, setInit] = useState(false)
 
@@ -21,20 +19,12 @@ const ParticleBackground = ({ propTheme }) => {
       //await loadBasic(engine);
     }).then(() => {
       setInit(true)
-      console.log('particleBG ' + theme)
     })
-  }, [theme])
+  }, [])
 
   const particlesLoaded = (container) => {
     //console.log(container)
   }
-
-  useEffect(() => {
-    if (particlesContainer && particlesContainer.currentTheme !== theme) {
-      particlesContainer.loadTheme(theme)
-    }
-    console.log('ue2 ' + theme)
-  }, [theme, particlesContainer])
 
   const ParticlesConfig = {
     fullScreen: {
@@ -43,13 +33,13 @@ const ParticleBackground = ({ propTheme }) => {
     },
     background: {
       color: {
-        value: theme === 'dark' ? '#f2f2f2' : '#121212',
+        value: '#121212',
       },
     },
     fpsLimit: 120,
     particles: {
       color: {
-        value: theme === 'dark' ? '#121212' : "#f2f2f2",
+        value: "#f2f2f2",
       },
       move: {
         direction: "none",
@@ -77,43 +67,6 @@ const ParticleBackground = ({ propTheme }) => {
         value: { min: 0.5, max: 2 },
       },
     },
-    themes: [
-      {
-        name: "light",
-        default: {
-          value: true,
-          mode: "light"
-        },
-        options: {
-          background: {
-            color: "#f2f2f2"
-          },
-          particles: {
-            color: {
-              value: "#121212"
-            }
-          }
-        }
-      },
-      {
-        name: "dark",
-        default: {
-          value: true,
-          mode: "dark"
-        },
-        options: {
-          background: {
-            //color: "transparent"
-            color: "#121212"
-          },
-          particles: {
-            color: {
-              value: "#f2f2f2"
-            }
-          }
-        }
-      }
-    ],
     detectRetina: true,
   }
 
@@ -122,7 +75,6 @@ const ParticleBackground = ({ propTheme }) => {
       <div>
 
         <Particles
-          //theme={theme}
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={ParticlesConfig}

@@ -12,11 +12,17 @@ export default function Contact() {
   return (
     <div name='contact' className='h-full w-full py-16 bg-transparent text-darkText dark:text-text z-20 relative'>
       <div className='flex flex-col p-4 justify-center h-full w-full text-center'>
-          <div className="w-1/2 mx-auto flex gap-2 justify-center mt-8">
+          <div className="w-full md:w-1/2 md:mx-auto flex flex-col md:flex-row gap-6 justify-center text-center mt-8">
             <a target="blank" href="https://github.com/ASweet10"className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
               <div className='flex flex-row items-center gap-2'>
                 <h1 className='text-xl font-semibold'>GitHub</h1>
                 <FaGithub className='text-2xl'/>
+              </div>
+            </a>
+            <a target="blank" href="https://www.linkedin.com/in/aaronsweet26/"className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
+              <div className='flex flex-row items-center gap-2'>
+                <h1 className='text-xl font-semibold'>LinkedIn</h1>
+                <FaLinkedin className='text-2xl'/>
               </div>
             </a>
             <a href="mailto:AaronSweet10@gmail.com" target="blank" className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>

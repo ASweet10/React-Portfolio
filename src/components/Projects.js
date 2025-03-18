@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef } from 'react'
 import { FaGithub } from 'react-icons/fa'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { motion, useInView } from "framer-motion"
-import { useColorMode } from "./useColorMode"
 
 const fadeInAnimationVariants = {
   initial: { opacity: 0, y: 100 },
@@ -16,20 +15,6 @@ export default function Projects() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
-  const [ colorMode, setColorMode ] = useState('dark')
-
-  useEffect(() => {
-    const theme = localStorage.getItem('theme')
-    if (theme) {
-      setColorMode(theme === 'dark')
-    }
-  }, [])
-
-  useEffect(() => {
-    localStorage.setItem('theme', colorMode === 'dark' ? 'dark' : 'light')
-    console.log(localStorage.getItem('theme'))
-  }, [colorMode])
-
   const baseS3URL = "https://react-portfolio11.s3.us-east-2.amazonaws.com/"
   const projects = [
     { id: 0, title: 'El Rey', src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
@@ -41,9 +26,8 @@ export default function Projects() {
         { id: 4, name: "AWS", color: "bg-aws"},
         { id: 5, name: "Node", color: "bg-nodejs" },
         { id: 6, name: "Express", color: "bg-nodejs"},  
-
       ],
-      desc: 'Restaurant site with full Stripe integration; Includes admin panel for users, products, etc.',
+      desc: 'Website for a restaurant; Includes full Stripe integration & admin panel',
       demoUrl: 'https://next-js-food-order-el-rey.vercel.app',
       sourceURL: 'https://github.com/ASweet10/NextJS_FoodOrder',
     },  
@@ -56,7 +40,7 @@ export default function Projects() {
         { id: 4, name: "Node", color: "bg-nodejs" },
         { id: 5, name: "Express", color: "bg-nodejs"},  
       ],
-      desc: 'Minimalist E-Commerce site. User can filter products and add/remove/update cart items',
+      desc: 'E-Commerce site; User can filter products by price, color, category, etc.',
       demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
       sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
     },  
@@ -67,7 +51,7 @@ export default function Projects() {
         { id: 2, name: "Tailwind", color: "bg-tailwind" },
         { id: 3, name: "TypeScript", color: "bg-typescript" },
       ],
-      desc: 'Real estate rental site. Users can search locations for properties & filter results',
+      desc: 'Real estate rental site. Users can search map for properties & filter results',
       demoUrl: 'https://react-real-estate-tau.vercel.app',
       sourceURL: 'https://github.com/ASweet10/React-RealEstate',
     },
@@ -88,7 +72,7 @@ export default function Projects() {
   ]
 
   return (
-    <div name="projects" className={`h-full w-full scroll-mt-96 bg-transparent ${colorMode === 'dark' ? 'text-darkText' : 'text-text'} z-20 relative`}>
+    <div name="projects" className="h-full w-full scroll-mt-96 bg-transparent text-text z-20 relative">
       <div className='max-w-screen-lg px-8 p-4 mx-auto flex flex-col justify-center h-full w-full text-center md:text-left'>
         <div className='mt-20'> {/* Navbar offset */}
           <div className='pb-8'>
@@ -117,7 +101,7 @@ export default function Projects() {
                     <div className='flex flex-row flex-wrap w-full gap-2 justify-center md:justify-start md:pl-6'>
                       {tools && tools.map(({id, name, color}) => {
                         return(
-                          <div className={`rounded-lg ${color}`} key={id}>
+                          <div className="rounded-lg bg-slate-300 text-gray-800" key={id}>
                             <h1 className='text-center font-semibold text-lg p-3'>{name}</h1>
                           </div>
                         )

@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useColorMode } from './useColorMode'
+import { IoMailOutline } from 'react-icons/io5'
 
 export default function About() {
 
@@ -13,21 +14,20 @@ export default function About() {
               Currently I'm getting into TypeScript, Docker, and frontend design to improve the user experience.
             </p>
           </div>
-          <div className="w-1/2 flex gap-2">
+          <div className="w-full justify-center flex gap-2">
             <a target="blank" href="https://github.com/ASweet10"className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
-              <div className='flex flex-row items-center gap-2'>
-                <h1 className='text-xl font-semibold mt-2'>GitHub</h1>
-                <FaGithub className='text-3xl'/>
-              </div>
+              <FaGithub className='text-4xl'/>
             </a>
             <a target="blank" href="https://www.linkedin.com/in/aaronsweet26/"className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
               <div className='flex flex-row gap-2'>
-                <div className='flex flex-row items-center gap-2'>
-                  <h1 className='text-xl font-semibold mt-2'>LinkedIn</h1>
-                  <FaLinkedin className='text-3xl text-blue-500'/>
-                </div>
+                <FaLinkedin className='text-4xl'/>
               </div>
             </a>
+            <a href="mailto:AaronSweet10@gmail.com" target="blank" className='flex flex-col rounded-lg px-8 py-2 items-center justify-center'>
+              <div className='flex flex-row gap-2'>
+                <IoMailOutline className='text-4xl'/>
+              </div>
+              </a>
           </div>
         </div>
       </div>
