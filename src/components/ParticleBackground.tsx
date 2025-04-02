@@ -1,32 +1,34 @@
-import React, { useEffect, useState, useCallback } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 import Particles, { initParticlesEngine } from "@tsparticles/react"
-//import ParticlesConfig from "./ParticlesConfig"
-import { loadSlim } from "@tsparticles/slim"
+import { type Container, type ISourceOptions, MoveDirection, OutMode, Engine} from "@tsparticles/engine"
+import ParticlesConfig from "./ParticlesConfig"
+import { loadFull } from "tsparticles"
 
 const ParticleBackground = () => {
-  const [ particlesContainer, setParticlesContainer ] = useState()
   const [init, setInit] = useState(false)
 
   // this should be run only once per application lifetime
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
+    initParticlesEngine(async (engine: Engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
       // starting from v2 you can add only the features you need reducing the bundle size
       //await loadAll(engine);
-      //await loadFull(engine);
-      await loadSlim(engine)
+      await loadFull(engine);
       //await loadBasic(engine);
     }).then(() => {
       setInit(true)
     })
   }, [])
 
-  const particlesLoaded = (container) => {
-    //console.log(container)
+
+  const particlesLoaded = async (container?: Container): Promise<void> => {
+    console.log(container)
   }
 
-  const ParticlesConfig = {
+
+  const options: ISourceOptions = useMemo(
+    () => ({
     fullScreen: {
       enable: true,
       zIndex: -1
@@ -68,7 +70,9 @@ const ParticleBackground = () => {
       },
     },
     detectRetina: true,
-  }
+    }),
+    [],
+  )
 
   if (init) {
     return (
@@ -77,7 +81,7 @@ const ParticleBackground = () => {
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
-          options={ParticlesConfig}
+          options={options}
         />
       </div>
     )

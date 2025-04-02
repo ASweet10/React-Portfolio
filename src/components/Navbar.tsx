@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-scroll'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import ParticleBackground from 'components/ParticleBackground'
+import ParticleBackground from './ParticleBackground'
 import { motion } from 'framer-motion'
 
 export default function Navbar() {
-  const [ navOpen, setNavOpen ] = useState(false)
-  const [ name, setName ] = useState("Sweet")
+  const name = "Sweet"
 
   const navLinks = [
     { id: 1, link: 'about' },
@@ -18,58 +16,55 @@ export default function Navbar() {
     <>
       <div className="flex mx-auto items-center max-w-screen-lg h-20 px-4 md:px-24 justify-center bg-transparent text-text z-30 relative">
         <div className='hidden md:flex flex-row items-center'>
-          <motion.a
-            initial="initial"
-            whileHover="hovered"
-            href="/" 
-            className='uppercase text-lg cursor-pointer font-bold font-bebas relative block overflow-hidden '
-          >
-            <div>
-              <span className='mr-2'>Aaron</span>
-              {name.split("").map((letter, i) => {
-                return <motion.span
+          <a href="/" className='uppercase text-lg cursor-pointer font-bold font-bebas relative block overflow-hidden'>
+            <motion.div initial="initial" whileHover="hovered">
+              <div>
+                <span className='mr-2'>Aaron</span>
+                <span className='inline-block'> 
+                  {name.split("").map((letter, i) => {
+                    return <motion.span key={i}
+                      //className='inline-block'
+                      variants={{
+                        initial: { y: 0 },
+                        hovered: { y: "-100%" }
+                      }}
+                      transition={{ duration: 0.25,
+                        ease: "easeInOut",
+                        delay: 0.025 * i
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                  })}
+                </span>
+              </div>
+
+              <div className='absolute inset-0'>
+                <span className='mr-2'>Aaron</span>
+                {name.split("").map((letter, i) => {
+                  return <motion.span 
                   key={i}
-                  className='inline-block'
+                  //className='inline-block'
                   variants={{
-                    initial: {
-                      y: 0
-                    },
-                    hovered: {
-                      y: "-100%"
-                    }
+                  initial: {
+                    y: "100%"
+                  },
+                  hovered: {
+                    y: 0
+                  }
                   }}
                   transition={{
                     duration: 0.25,
                     ease: "easeInOut",
                     delay: 0.025 * i
                   }}
-                >{letter}</motion.span>
-              })}
-            </div>
-
-            <div className='absolute inset-0'>
-              <span className='mr-2'>Aaron</span>
-              {name.split("").map((letter, i) => {
-                return <motion.span 
-                key={i}
-                className='inline-block'
-                variants={{
-                 initial: {
-                   y: "100%"
-                 },
-                 hovered: {
-                   y: 0
-                 }
-                }}
-                transition={{
-                  duration: 0.25,
-                  ease: "easeInOut",
-                  delay: 0.025 * i
-                }}
-                >{letter}</motion.span>
-              })}
-            </div>
-          </motion.a>
+                  >
+                    <span className='inline-block'>{letter}</span>
+                  </motion.span>
+                })}
+              </div>
+            </motion.div>
+          </a>
 
           <ul className='flex md:pl-48'>
             {navLinks.map(({ id, link }) => {
