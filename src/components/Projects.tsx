@@ -112,11 +112,11 @@ export default function Projects() {
                       </div>
 
                       <div className='flex pt-6 md:py-6 items-center justify-start gap-4'>
-                        <a target="blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
+                        <a target="_blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
                           <h1 className='pr-2 '>Demo</h1>
                           <BsBoxArrowUpRight size={'20px'} />
                         </a>
-                        <a target="blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
+                        <a target="_blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
                           <h1 className='pr-2'>Code</h1>
                           <FaGithub size={'20px'} />
                         </a>
