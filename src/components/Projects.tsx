@@ -43,7 +43,7 @@ export default function Projects() {
       demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
       sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
     },  
-    { id: 2, title: 'RentPro', src1: baseS3URL+"next_RealEstate1.png", src2: baseS3URL+"next_RealEstate2.jpg",
+    { id: 2, title: 'RentPro', src1: baseS3URL+"realestate1.png", src2: baseS3URL+"next_RealEstate2.jpg",
       tools: [ 
         { id: 0, name: "React", icon: <FaReact /> },
         { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
@@ -55,7 +55,7 @@ export default function Projects() {
       demoUrl: 'https://react-real-estate-tau.vercel.app',
       sourceURL: 'https://github.com/ASweet10/React-RealEstate',
     },
-    { id: 3, title: 'EliteFitness', src1: baseS3URL+"MERN-gym-classes.png", src2: baseS3URL+"MERN-gym-blog.png",
+    { id: 3, title: 'EliteFitness', src1: baseS3URL+"gym1.jpg", src2: baseS3URL+"MERN-gym-blog.png",
       tools: [ 
         { id: 0, name: "React", icon: <FaReact /> },
         { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
