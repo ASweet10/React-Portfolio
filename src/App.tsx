@@ -5,6 +5,7 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Navbar from './components/Navbar'
 import ParticleBackground from './components/ParticleBackground'
+import { Element } from 'react-scroll'
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
         <ParticleBackground />
         <Navbar />
         <Home />
-        <About />
-        <Projects />
-        <Contact />
+        <Element name="about"><About /></Element>
+        <Element name="projects"><Projects /></Element>
+        <Element name="contact"><Contact /></Element>
       </div>
   );
 }
