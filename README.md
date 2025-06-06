@@ -1,13 +1,10 @@
 # Portfolio website
-## Features
-- FramerMotion transitions
-- tsParticles background
-
 ## Tech
 - React
 - Vite
 - Tailwind CSS
 - TypeScript
+- FramerMotion
 - tsParticles
 - AWS S3
 
