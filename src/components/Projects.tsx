@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { FaGithub, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { motion, useInView } from "framer-motion"
-import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiMysql } from "react-icons/si"
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiAmazonaws, SiDotnet, SiPostgresql, SiAwsamplify } from "react-icons/si"
 
 const fadeInAnimationVariants = {
   initial: { opacity: 0, y: 100 },
@@ -17,7 +17,20 @@ export default function Projects() {
 
   const baseS3URL = "https://react-portfolio11.s3.us-east-2.amazonaws.com/"
   const projects = [
-    { id: 0, title: 'El Rey', src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
+    { id: 0, title: "Tony's Pizza", src1: baseS3URL+"pizzaHome.jpg", src2: baseS3URL+"pizzaMenu.jpg",
+      tools: [ 
+        { id: 0, name: "React", icon: <FaReact /> },
+        { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
+        { id: 2, name: "Tailwind", icon: <SiTailwindcss /> },
+        { id: 3, name: "TypeScript", icon: <SiTypescript /> },
+        { id: 4, name: "PostgreSQL", icon: <SiPostgresql /> },
+        { id: 5, name: "C#/.Net 8", icon: <SiDotnet /> },
+        { id: 6, name: "EC2/RDS", icon: <SiAmazonaws /> },
+      ],
+      desc: 'Pizza shop website; Users order using .Net API on AWS EC2 and RDS instances',
+      sourceURL: 'https://github.com/ASweet10/csharp-pizzashop',
+    },
+    { id: 1, title: 'El Rey', src1: baseS3URL+"NextFood1.png", src2: baseS3URL+"NextFood2.png",
       tools: [ 
         { id: 0, name: "NextJS", icon: <SiNextdotjs /> },
         { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
@@ -26,11 +39,22 @@ export default function Projects() {
         { id: 4, name: "Node", icon: <FaNodeJs /> },
         { id: 5, name: "Express", icon: <SiExpress /> },  
       ],
-      desc: 'Website for a restaurant; Includes full Stripe integration & admin panel',
-      demoUrl: 'https://next-js-food-order-el-rey.vercel.app',
+      desc: 'Mexican restaurant website; Includes Stripe integration & custom admin API',
       sourceURL: 'https://github.com/ASweet10/Next-ElRey',
     },  
-    { id: 1, title: 'Alpine', src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
+    { id: 2, title: 'EliteFitness', src1: baseS3URL+"gym1.jpg", src2: baseS3URL+"MERN-gym-blog.png",
+      tools: [ 
+        { id: 0, name: "React", icon: <FaReact /> },
+        { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
+        { id: 2, name: "Tailwind", icon: <SiTailwindcss /> },
+        { id: 3, name: "Node", icon: <FaNodeJs /> },
+        { id: 4, name: "Express", icon: <SiExpress /> },  
+        { id: 5, name: "MongoDB", icon: <SiMongodb /> },
+      ],
+      desc: 'Gym website built using the MERN stack. Uses JWT & bcrypt for user authentication',
+      sourceURL: 'https://github.com/ASweet10/MERN-gym',
+    },
+    { id: 3, title: 'Alpine', src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
       tools: [ 
         { id: 0, name: "React", icon: <FaReact /> },
         { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
@@ -40,34 +64,8 @@ export default function Projects() {
         { id: 5, name: "MongoDB", icon: <SiMongodb /> },
       ],
       desc: 'E-Commerce site; User can filter products by price, color, category, etc.',
-      demoUrl: 'https://react-ecommerce-eight-beta.vercel.app',
       sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
     },  
-    { id: 2, title: 'RentPro', src1: baseS3URL+"realestate1.png", src2: baseS3URL+"next_RealEstate2.jpg",
-      tools: [ 
-        { id: 0, name: "React", icon: <FaReact /> },
-        { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
-        { id: 2, name: "Tailwind", icon: <SiTailwindcss /> },
-        { id: 3, name: "TypeScript", icon: <SiTypescript /> },
-        { id: 4, name: "MySQL", icon: <SiMysql /> },
-      ],
-      desc: 'Real estate rental site. Users can search map for properties & filter results',
-      demoUrl: 'https://react-real-estate-tau.vercel.app',
-      sourceURL: 'https://github.com/ASweet10/React-RealEstate',
-    },
-    { id: 3, title: 'EliteFitness', src1: baseS3URL+"gym1.jpg", src2: baseS3URL+"MERN-gym-blog.png",
-      tools: [ 
-        { id: 0, name: "React", icon: <FaReact /> },
-        { id: 1, name: "HTML/CSS", icon: <FaHtml5 /> },
-        { id: 2, name: "Tailwind", icon: <SiTailwindcss /> },
-        { id: 3, name: "Node", icon: <FaNodeJs /> },
-        { id: 4, name: "Express", icon: <SiExpress /> },  
-        { id: 5, name: "MongoDB", icon: <SiMongodb /> },
-      ],
-      desc: 'Gym website built using the MERN stack. Uses JWT for user authentication',
-      demoUrl: 'https://mern-gym-frontend.vercel.app',
-      sourceURL: 'https://github.com/ASweet10/MERN-gym',
-    },
   ]
 
   return (
@@ -79,7 +77,7 @@ export default function Projects() {
             </div>
 
             <div className='flex flex-col gap-12' ref={ref}>
-              {projects.map(({id, title, src1, src2, tools, desc, demoUrl, sourceURL,}) => (
+              {projects.map(({id, title, src1, src2, tools, desc, sourceURL,}) => (
                 <motion.div key={id}
                   variants={fadeInAnimationVariants} initial="initial" whileInView="animate"
                   viewport={{ once: true}} custom={id}
@@ -112,10 +110,12 @@ export default function Projects() {
                         </div>
 
                         <div className='flex pt-6 md:py-6 items-center justify-start gap-4'>
+                          {/*
                           <a target="_blank" href={demoUrl} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
                             <h1 className='pr-2 '>Demo</h1>
                             <BsBoxArrowUpRight size={'20px'} />
                           </a>
+                          */}
                           <a target="_blank" href={sourceURL} className='flex flex-row rounded-lg px-8 py-2 items-center bg-button hover:text-blue-400'>
                             <h1 className='pr-2'>Code</h1>
                             <FaGithub size={'20px'} />
