@@ -1,5 +1,4 @@
 # Portfolio website
-## Tech
 - React
 - Vite
 - Tailwind CSS
