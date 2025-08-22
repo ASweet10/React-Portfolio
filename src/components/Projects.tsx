@@ -53,7 +53,7 @@ export default function Projects() {
       ],
       desc: 'Gym website built using the MERN stack. Uses JWT & bcrypt for user authentication',
       sourceURL: 'https://github.com/ASweet10/MERN-gym',
-    },
+    },/*
     { id: 3, title: 'Alpine', src1: baseS3URL+"ecommerce1.png", src2: baseS3URL+"ecommerce2.png",
       tools: [ 
         { id: 0, name: "React", icon: <FaReact /> },
@@ -65,7 +65,8 @@ export default function Projects() {
       ],
       desc: 'E-Commerce site; User can filter products by price, color, category, etc.',
       sourceURL: 'https://github.com/ASweet10/React-Ecommerce',
-    },  
+    },
+    */  
   ]
 
   return (
